@@ -238,6 +238,17 @@ a { text-decoration: none; color: inherit; }
 .quote-note.ok { color: #1a7f37; }
 .quote-note.err { color: #c0392b; }
 
+/* Trade Lanes */
+.lanes { padding: 80px 0; background: var(--off-white); text-align: center; }
+.lanes-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
+.lane-card { background: var(--white); border-radius: 14px; padding: 32px 24px; box-shadow: 0 2px 12px rgba(0,0,0,0.06); border-bottom: 4px solid var(--gold); transition: transform 0.3s, box-shadow 0.3s; }
+.lane-card:hover { transform: translateY(-6px); box-shadow: 0 8px 30px rgba(0,0,0,0.12); }
+.lane-flags { display: flex; align-items: center; justify-content: center; gap: 16px; margin-bottom: 18px; }
+.lane-flags img { width: 48px; height: 32px; object-fit: cover; border-radius: 4px; box-shadow: 0 2px 6px rgba(0,0,0,0.2); }
+.lane-flags i { color: var(--gold); font-size: 1rem; }
+.lane-card h3 { font-size: 1.15rem; color: var(--navy); margin-bottom: 10px; }
+.lane-card p { color: #666; font-size: 0.92rem; }
+
 /* Footer */
 .footer { background: var(--navy); padding: 48px 0 0; }
 .footer-inner { display: grid; grid-template-columns: 1fr 2fr 1fr; gap: 40px; align-items: start; padding-bottom: 32px; border-bottom: 1px solid rgba(200,164,78,0.2); }
@@ -272,6 +283,7 @@ a { text-decoration: none; color: inherit; }
   .equip-grid { grid-template-columns: repeat(2, 1fr); }
   .knowledge-grid { grid-template-columns: repeat(2, 1fr); }
   .range-grid { grid-template-columns: repeat(2, 1fr); }
+  .lanes-grid { grid-template-columns: repeat(2, 1fr); }
   .core-row { flex-direction: column; align-items: center; }
   .core-row.top-row .core-card, .core-row.bottom-row .core-card { flex: 0 1 auto; width: 100%; max-width: 400px; }
   .growth-row { flex-direction: column; align-items: center; }
@@ -301,6 +313,7 @@ a { text-decoration: none; color: inherit; }
 
 @media (max-width: 480px) {
   .equip-grid, .knowledge-grid, .range-grid { grid-template-columns: 1fr; }
+  .lanes-grid { grid-template-columns: 1fr; }
   .about-img { height: auto; object-fit: contain; }
   .hero { min-height: 380px; }
 }

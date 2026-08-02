@@ -264,8 +264,19 @@ a { text-decoration: none; color: inherit; }
   .nav-toggle { display: block; }
   .hero h1 { font-size: 2rem; }
   .hero-desc { font-size: 1rem; }
+  .hero { min-height: 420px; padding: 110px 0 80px; }
+  .hero-bg img { object-position: center 20%; }
+  .about-img { height: 260px; }
+  .agency-box { padding: 32px 24px; flex-direction: column; align-items: flex-start; }
+  .agency-image { width: 100%; }
+  .agency-image img { width: 100%; height: auto; }
   .equip-grid, .knowledge-grid { grid-template-columns: 1fr 1fr; }
   .range-grid { grid-template-columns: 1fr 1fr; }
   .core-grid, .growth-grid { grid-template-columns: 1fr; }
-  .agency-box { padding: 32px 24px; }
+}
+
+@media (max-width: 480px) {
+  .equip-grid, .knowledge-grid, .range-grid { grid-template-columns: 1fr; }
+  .about-img { height: 220px; }
+  .hero { min-height: 380px; }
 }

@@ -112,6 +112,28 @@ document.getElementById('contactForm').addEventListener('submit', (e) => {
   window.location.href = 'mailto:' + to + '?subject=' + subject + '&body=' + body;
 });
 
+// Quote Request Form
+const quoteForm = document.getElementById('quoteForm');
+if (quoteForm) {
+  quoteForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const equipment = document.getElementById('qfEquipment').value;
+    const port = document.getElementById('qfPort').value;
+    const contact = document.getElementById('qfContact').value;
+    const note = document.getElementById('quoteNote');
+    const to = 'ashok.narayanan@shipaurashipping.com';
+    const subject = encodeURIComponent('SHIPAURA Quote Request: ' + equipment);
+    const body = encodeURIComponent(
+      'Equipment: ' + equipment + '\n' +
+      'Origin/Destination: ' + port + '\n' +
+      'Contact: ' + contact
+    );
+    window.location.href = 'mailto:' + to + '?subject=' + subject + '&body=' + body;
+    note.textContent = 'Opening your email app — your quote request is ready to send.';
+    note.className = 'quote-note ok';
+  });
+}
+
 // Flag Selector
 document.querySelectorAll('.flag').forEach(flag => {
   flag.addEventListener('click', (e) => {

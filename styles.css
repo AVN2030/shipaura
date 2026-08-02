@@ -223,6 +223,21 @@ a { text-decoration: none; color: inherit; }
 .checkbox-label input { width: 16px; height: 16px; accent-color: var(--gold); }
 .btn-submit { align-self: stretch; width: 100%; font-size: 1.1rem; padding: 18px; }
 
+/* Quote Request Wizard */
+.quote { padding: 80px 0; background: var(--navy); text-align: center; }
+.quote h2 { color: var(--white); }
+.quote h2 span { color: var(--gold); }
+.quote .section-sub { color: #b0c4de; }
+.quote-box { max-width: 640px; margin: 0 auto; background: var(--white); border-radius: 14px; padding: 36px; box-shadow: 0 8px 30px rgba(0,0,0,0.35); border-top: 4px solid var(--gold); text-align: left; }
+#quoteForm { display: flex; flex-direction: column; gap: 18px; }
+.quote-field label { font-weight: 700; color: var(--navy); font-size: 0.85rem; letter-spacing: 1px; text-transform: uppercase; display: block; margin-bottom: 6px; }
+.quote-field input, .quote-field select { width: 100%; padding: 15px 16px; border: 1.5px solid #ddd; border-radius: 8px; font-size: 0.95rem; font-family: inherit; background: var(--white); transition: border-color 0.2s, box-shadow 0.2s; }
+.quote-field input:focus, .quote-field select:focus { outline: none; border-color: var(--gold); box-shadow: 0 0 0 3px rgba(200,164,78,0.2); }
+.btn-quote { width: 100%; font-size: 1.1rem; padding: 18px; }
+.quote-note { margin-top: 16px; font-size: 1rem; font-weight: 700; text-align: center; }
+.quote-note.ok { color: #1a7f37; }
+.quote-note.err { color: #c0392b; }
+
 /* Footer */
 .footer { background: var(--navy); padding: 48px 0 0; }
 .footer-inner { display: grid; grid-template-columns: 1fr 2fr 1fr; gap: 40px; align-items: start; padding-bottom: 32px; border-bottom: 1px solid rgba(200,164,78,0.2); }

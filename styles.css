@@ -235,10 +235,8 @@ a { text-decoration: none; color: inherit; }
 .contact-form-wrapper { background: var(--white); border-radius: 14px; padding: 36px; box-shadow: 0 8px 30px rgba(200,164,78,0.2); border-top: 4px solid var(--gold); }
 #contactForm { display: flex; flex-direction: column; gap: 14px; }
 #contactForm input, #contactForm select, #contactForm textarea { padding: 15px 16px; border: 1.5px solid #ddd; border-radius: 8px; font-size: 0.95rem; font-family: inherit; background: var(--white); transition: border-color 0.2s, box-shadow 0.2s; }
-#contactForm input:focus, #contactForm select:focus, #contactForm textarea:focus { outline: none; border-color: var(--gold); box-shadow: 0 0 0 3px rgba(200,164,78,0.2); }
-.checkbox-label { display: flex; align-items: center; gap: 8px; font-size: 0.9rem; color: #666; cursor: pointer; }
-.checkbox-label input { width: 16px; height: 16px; accent-color: var(--gold); }
-.btn-submit { align-self: stretch; width: 100%; font-size: 1.1rem; padding: 18px; }
+ #contactForm input:focus, #contactForm select:focus, #contactForm textarea:focus { outline: none; border-color: var(--gold); box-shadow: 0 0 0 3px rgba(200,164,78,0.2); }
+ .btn-submit { align-self: stretch; width: 100%; font-size: 1.1rem; padding: 18px; }
 
 /* Quote Request Wizard */
 .quote { padding: 80px 0; background: var(--navy); text-align: center; }

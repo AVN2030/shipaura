@@ -151,6 +151,34 @@ document.querySelectorAll('.faq-q').forEach(q => {
   });
 });
 
+// Hero Rotating Languages
+const heroLang = document.getElementById('heroLang');
+if (heroLang) {
+  const phrases = [
+    { t: 'Container Solutions', c: '#ffd76a' },
+    { t: '集装箱解决方案', c: '#dbb960' },
+    { t: 'Soluciones de Contenedores', c: '#e8c984' },
+    { t: 'Solutions de Conteneurs', c: '#f0d694' },
+    { t: 'Containerlösungen', c: '#cdb06a' },
+    { t: 'Containerlösningar', c: '#e5c574' },
+    { t: 'Solusi Kontainer', c: '#f5dda2' },
+    { t: 'حلول الحاويات', c: '#dcbc6a' },
+    { t: 'Soluções em Contêineres', c: '#eacf8f' }
+  ];
+  let idx = 0;
+  heroLang.textContent = phrases[0].t;
+  heroLang.style.opacity = '1';
+  setInterval(() => {
+    heroLang.style.opacity = '0';
+    setTimeout(() => {
+      idx = (idx + 1) % phrases.length;
+      heroLang.textContent = phrases[idx].t;
+      heroLang.style.color = phrases[idx].c;
+      heroLang.style.opacity = '1';
+    }, 600);
+  }, 2600);
+}
+
 // Flag Selector
 document.querySelectorAll('.flag').forEach(flag => {
   flag.addEventListener('click', (e) => {

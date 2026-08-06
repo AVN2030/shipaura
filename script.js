@@ -129,6 +129,9 @@ if (quoteForm) {
       'Contact: ' + contact
     );
     window.location.href = 'mailto:' + to + '?subject=' + subject + '&body=' + body;
+    document.getElementById('qfEquipment').value = '';
+    document.getElementById('qfPort').value = '';
+    document.getElementById('qfContact').value = '';
     note.textContent = 'Opening your email app — your quote request is ready to send.';
     note.className = 'quote-note ok';
   });

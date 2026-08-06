@@ -119,6 +119,8 @@ if (quoteForm) {
     e.preventDefault();
     const equipment = document.getElementById('qfEquipment').value;
     const port = document.getElementById('qfPort').value;
+    const company = document.getElementById('qfCompany').value;
+    const country = document.getElementById('qfCountry').value;
     const contact = document.getElementById('qfContact').value;
     const note = document.getElementById('quoteNote');
     const to = 'ashok.narayanan@shipaurashipping.com';
@@ -126,11 +128,15 @@ if (quoteForm) {
     const body = encodeURIComponent(
       'Equipment: ' + equipment + '\n' +
       'Origin/Destination: ' + port + '\n' +
+      'Company: ' + company + '\n' +
+      'Country: ' + country + '\n' +
       'Contact: ' + contact
     );
     window.location.href = 'mailto:' + to + '?subject=' + subject + '&body=' + body;
     document.getElementById('qfEquipment').value = '';
     document.getElementById('qfPort').value = '';
+    document.getElementById('qfCompany').value = '';
+    document.getElementById('qfCountry').value = '';
     document.getElementById('qfContact').value = '';
     note.textContent = 'Opening your email app — your quote request is ready to send.';
     note.className = 'quote-note ok';
